@@ -12,7 +12,9 @@
       <key>Definitions</key>
       <dict>
          <key>../Podfile:platform</key>
-         <string>platform :ios, &quot;5.0&quot;</string>
+         <string>xcodeproj &apos;___PACKAGENAME___.xcodeproj&apos;
+
+platform :ios, &apos;5.0&apos;</string>
       </dict>
       <key>Description</key>
       <string>AeroGear project template.</string>
