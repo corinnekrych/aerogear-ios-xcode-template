@@ -6,7 +6,7 @@
       <key>Name</key>
       <string>AeroGear Application</string>
       <key>Description</key>
-      <string>This template provides a starting point for an application using the AeroGear framework. It provides a shared instance class that will be used to provide connectivity through Pipes to remote RESTful endpoints, as well as a Podfile and GitHub's Objective-C .gitignore file.</string>
+      <string>This template provides a starting point for an application using the AeroGear framework. A shared instance class is provided, offering connectivity through Pipes to remote RESTful endpoints, as well as a Podfile and an Objective-C .gitignore file.</string>
       <key>Identifier</key>
       <string>org.aerogear.template.project.ios</string>
       <key>Kind</key>
