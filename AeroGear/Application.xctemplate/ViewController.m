@@ -14,15 +14,33 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    // fetch the data
-    [[___PACKAGENAMEASIDENTIFIER___APIClient sharedInstance].tasksPipe read:^(id responseObject) {
-        _tasks = responseObject;
-        
-        // update table with the newly fetched data
-        [self.tableView reloadData];
-        
+    self.title = @"Tasks";
+
+    // access the singleton instance that holds our pipes
+    ___PACKAGENAMEASIDENTIFIER___APIClient *apiClient = [___PACKAGENAMEASIDENTIFIER___APIClient sharedInstance];
+
+    // first, we need to login to the service
+
+    // Note: here we use static strings but a login screen
+    // will provide the necessary authentication details.
+    [apiClient loginWithUsername:@"john" password:@"123" success:^{
+
+        // logged in successfully
+
+        // time to retrieve remote data
+        [[apiClient tasksPipe] read:^(id responseObject) {
+            // update our model
+            _tasks = responseObject;
+
+            // instruct table to refresh view
+            [self.tableView reloadData];
+
+        } failure:^(NSError *error) {
+            NSLog(@"An error has occured during read! \n%@", error);
+        }];
+
     } failure:^(NSError *error) {
-        NSLog(@"An error has occured during read! \n%@", error);
+        NSLog(@"An error has occured during login! \n%@", error);
     }];
 }
 

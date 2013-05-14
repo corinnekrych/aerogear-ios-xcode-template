@@ -32,9 +32,16 @@ pod &apos;AeroGear&apos;
 
 @interface ___PACKAGENAMEASIDENTIFIER___APIClient : NSObject
 
+// the pipes for this service
 @property(readonly, nonatomic) id&lt;AGPipe&gt; tasksPipe;
+// ...add your own pipes
 
-+ (___PACKAGENAMEASIDENTIFIER___APIClient *)sharedInstance;</string>
++ (___PACKAGENAMEASIDENTIFIER___APIClient *)sharedInstance;
+
+- (void)loginWithUsername:(NSString *)username
+                 password:(NSString *)password
+                  success:(void (^)())success
+                  failure:(void (^)(NSError *error))failure;</string>
             <key>End</key>
             <string>@end</string>
             <key>Group</key>
@@ -51,7 +58,7 @@ pod &apos;AeroGear&apos;
 
 #import "___PACKAGENAMEASIDENTIFIER___APIClient.h"
 
-static NSString * const k___PACKAGENAMEASIDENTIFIER___APIBaseURLString = @"http://todo-aerogear.rhcloud.com/todo-server";
+static NSString * const k___PACKAGENAMEASIDENTIFIER___APIBaseURLString = @"http://todo-aerogear.rhcloud.com/todo-server/";
 
 @implementation ___PACKAGENAMEASIDENTIFIER___APIClient
 
@@ -61,27 +68,49 @@ static NSString * const k___PACKAGENAMEASIDENTIFIER___APIBaseURLString = @"http:
     static ___PACKAGENAMEASIDENTIFIER___APIClient *_sharedInstance = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&amp;onceToken, ^{
-        _sharedInstance = [[self alloc] initWithBaseURL:[NSURL URLWithString:k___PACKAGENAMEASIDENTIFIER___APIBaseURLString]];
+        _sharedInstance = [[self alloc] init];
     });
     
     return _sharedInstance;
 }
 
-- (id)initWithBaseURL:(NSURL *)url {
-     if (self = [super init]) {
-        
-        // create the Pipeline object pointing to the remote application
-        AGPipeline *pipeline = [AGPipeline pipelineWithBaseURL:[NSURL URLWithString:k___PACKAGENAMEASIDENTIFIER___APIBaseURLString]];
-        
-        // once pipeline is constructed setup the pipes that will
-        // point to the remote application REST endpoints
+- (void)loginWithUsername:(NSString *)username
+                 password:(NSString *)password
+                  success:(void (^)())success
+                  failure:(void (^)(NSError *error))failure {
+
+    NSURL *baseURL = [NSURL URLWithString:k___PACKAGENAMEASIDENTIFIER___APIBaseURLString];
+
+    AGPipeline *pipeline = [AGPipeline pipelineWithBaseURL:baseURL];
+
+    // create an authenticator object
+    AGAuthenticator *authenticator = [AGAuthenticator authenticator];
+
+    // request the default REST authentication module from 'Authenticator'
+    id&lt;AGAuthenticationModule&gt; todoAuthMod = [authenticator auth:^(id&lt;AGAuthConfig&gt; config) {
+        [config setName:@"todoAuthMod"]; // assign it a name
+        [config setBaseURL:baseURL];
+    }];
+
+    // login to the service
+    [todoAuthMod login:username password:password success:^(id object) {
+        // if successfully logged in, time to construct our pipes.
+        // Note that we assign the authentication module we
+        // created earlier, so every request can be properly
+        // authenticated against the remote endpoints.
         _tasksPipe = [pipeline pipe:^(id&lt;AGPipeConfig&gt; config) {
             [config setName:@"tasks"];
+            [config setAuthModule:todoAuthMod];
         }];
-        // ...any other pipes
-    }
 
-    return self;
+        // ..add your own pipes here
+
+        // inform client that we have successfully logged in
+        success();
+
+    } failure:^(NSError *error) {
+        failure(error);
+    }];
 }</string>
             <key>End</key>
             <string>@end</string>
