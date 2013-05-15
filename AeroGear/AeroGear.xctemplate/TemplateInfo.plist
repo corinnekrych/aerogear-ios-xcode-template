@@ -96,7 +96,7 @@ static NSString * const k___PACKAGENAMEASIDENTIFIER___APIBaseURLString = @"http:
 
     // login to the service
     [todoAuthMod login:username password:password success:^(id object) {
-        // if successfully logged in, time to construct our pipes.
+        // if successfully logged in, it is time to construct our pipes.
         // Note that we assign the authentication module we
         // created earlier, so every request can be properly
         // authenticated against the remote endpoints.
