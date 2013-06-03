@@ -13,7 +13,7 @@
       <dict>
          <key>../Podfile:aerogear</key>
          <string>
-pod &apos;AeroGear&apos;, :git => &apos;https://github.com/aerogear/aerogear-ios.git&apos; 
+pod &apos;AeroGear&apos;, :git => &apos;https://github.com/aerogear/aerogear-ios.git&apos;
          </string>
          <key>___PACKAGENAME___-Prefix.pch:objC:importSystemConfiguration</key>
          <string>#import &lt;SystemConfiguration/SystemConfiguration.h&gt;</string>
@@ -70,7 +70,7 @@ static NSString * const k___PACKAGENAMEASIDENTIFIER___APIBaseURLString = @"http:
     dispatch_once(&amp;onceToken, ^{
         _sharedInstance = [[self alloc] init];
     });
-    
+
     return _sharedInstance;
 }
 
@@ -81,7 +81,7 @@ static NSString * const k___PACKAGENAMEASIDENTIFIER___APIBaseURLString = @"http:
 
     NSURL *baseURL = [NSURL URLWithString:k___PACKAGENAMEASIDENTIFIER___APIBaseURLString];
 
-    // create the Pipeline object 
+    // create the Pipeline object
     AGPipeline *pipeline = [AGPipeline pipelineWithBaseURL:baseURL];
 
     // create the Authenticator object
@@ -91,7 +91,7 @@ static NSString * const k___PACKAGENAMEASIDENTIFIER___APIBaseURLString = @"http:
     id&lt;AGAuthenticationModule&gt; todoAuthMod = [authenticator auth:^(id&lt;AGAuthConfig&gt; config) {
         [config setName:@"todoAuthMod"]; // assign it a name
         [config setBaseURL:baseURL]; // the base url to authenticate to
-	[config setType:@"AG_SECURITY"]; // can be omitted as 'AG_SECURITY' is the default auth module
+	      [config setType:@"AG_SECURITY"]; // can be omitted as 'AG_SECURITY' is the default auth module
     }];
 
     // login to the service
