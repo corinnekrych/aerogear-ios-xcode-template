@@ -23,7 +23,7 @@
             <key>Identifier</key>
             <string>otp</string>
             <key>Name</key>
-            <string>Include OTP</string>
+            <string>OTP (TOTP) - Time-based One-Time Password</string>
             <key>SortOrder</key>
             <integer>2</integer>
             <key>Type</key>
@@ -36,8 +36,8 @@
                   <dict>
                      <key>../Podfile:aerogear</key>
                      <string>
-pod &apos;AeroGear&apos;, :git => &apos;https://github.com/aerogear/aerogear-ios.git&apos;                      
-pod &apos;AeroGear-OTP&apos;, :git =&gt; &apos;https://github.com/aerogear/aerogear-otp-ios.git&apos;
+pod &apos;AeroGear&apos;
+pod &apos;AeroGear-OTP&apos;
                      </string>
                   </dict>
                </dict>
