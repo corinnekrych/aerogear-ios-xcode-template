@@ -13,12 +13,13 @@
       <string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
       <key>Ancestors</key>
       <array>
-         <string>org.aerogear.template.project.CocoaPods</string>
-         <string>org.aerogear.template.project.AeroGear</string>
-         <string>com.apple.dt.unit.cocoaTouchApplication</string>
-         <string>com.apple.dt.unit.objectiveCApplication</string>
-         <string>com.apple.dt.unit.iPhoneBase</string>
-         <string>com.apple.dt.unit.prefixable</string>
+         <string>com.apple.dt.unit.objectiveCApplication</string>      
+         <string>com.apple.dt.unit.iPhoneBase</string> 
+         <string>com.apple.dt.unit.prefixable</string>         
+         <string>com.apple.dt.unit.cocoaTouchApplication</string>         
+         <string>org.aerogear.template.project.CocoaPods</string>      
+         <string>org.aerogear.template.project.AeroGear</string>         
+         <string>org.aerogear.template.project.AeroGear-OTP</string>
       </array>
       <key>Concrete</key>
       <true />
@@ -71,8 +72,7 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
          <string>Classes/Controllers/___VARIABLE_classPrefix:identifier___ViewController.m</string>         
          <string>.gitignore</string>         
       </array>
-      <key>Options</key>
-      <array />
+
       <key>SortOrder</key>
       <integer>1</integer>
    </dict>
