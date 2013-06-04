@@ -14,7 +14,6 @@
          <key>../Podfile:aerogear</key>
          <string>
 pod &apos;AeroGear&apos;
-         </string>
          <key>___PACKAGENAME___-Prefix.pch:objC:importSystemConfiguration</key>
          <string>#import &lt;SystemConfiguration/SystemConfiguration.h&gt;</string>
          <key>___PACKAGENAME___-Prefix.pch:objC:importCoreServices</key>
@@ -129,11 +128,150 @@ static NSString * const k___PACKAGENAMEASIDENTIFIER___APIBaseURLString = @"http:
          <string>../Podfile:aerogear</string>
          <string>___PACKAGENAME___-Prefix.pch:objC:importSystemConfiguration</string>
          <string>___PACKAGENAME___-Prefix.pch:objC:importCoreServices</string>
-         <string>Classes/Networking/___PACKAGENAMEASIDENTIFIER___APIClient.h</string>
-         <string>Classes/Networking/___PACKAGENAMEASIDENTIFIER___APIClient.m</string>
       </array>
       <key>Options</key>
-      <array />
+      <array>
+         <dict>
+            <key>Identifier</key>
+            <string>authType</string>
+            <key>Name</key>
+            <string>Authentication Type</string>
+            <key>Description</key>
+            <string>Which authentication type to enable by default</string>
+            <key>NotPersisted</key>
+            <true />
+            <key>Type</key>
+            <string>popup</string>
+            <key>Default</key>
+            <string>None</string>
+            <key>Units</key>
+            <dict>
+               <key>None</key>
+               <dict>
+                  <key>Definitions</key>
+                  <dict>
+                     <key>Classes/Service/___PACKAGENAMEASIDENTIFIER___APIClient.h</key>
+                     <dict>
+                        <key>Path</key>
+                        <string>Basic/___PACKAGENAMEASIDENTIFIER___APIClient.h</string>
+                        <key>Group</key>
+                        <key>Service</key>
+                     </dict>
+                     <key>Classes/Service/___PACKAGENAMEASIDENTIFIER___APIClient.m</key>
+                     <dict>
+                        <key>Path</key>
+                        <string>Basic/___PACKAGENAMEASIDENTIFIER___APIClient.m</string>
+                        <key>Group</key>
+                        <key>Service</key>
+                     </dict>
+                     <key>Classes/Controllers/___VARIABLE_classPrefix:identifier___ViewController.h</key>
+                     <dict>
+                        <key>Path</key>
+                        <string>Basic/ViewController.h</string>
+                        <key>Group</key>
+                        <key>Controllers</key>
+                     </dict>
+                     <key>Classes/Controllers/___VARIABLE_classPrefix:identifier___ViewController.m</key>
+                     <dict>
+                        <key>Path</key>
+                        <string>Basic/ViewController.m</string>
+                        <key>Group</key>
+                        <key>Controllers</key>
+                     </dict>
+                  </dict>
+                  <key>Nodes</key>
+                  <array>
+                     <string>Classes/Controllers/___VARIABLE_classPrefix:identifier___ViewController.h</string>
+                     <string>Classes/Controllers/___VARIABLE_classPrefix:identifier___ViewController.m</string>
+                     <string>Classes/Service/___PACKAGENAMEASIDENTIFIER___APIClient.h</string>
+                     <string>Classes/Service/___PACKAGENAMEASIDENTIFIER___APIClient.m</string>
+                  </array>
+               </dict>
+               <key>Basic</key>
+               <dict>
+                  <key>Definitions</key>
+                  <dict>
+                     <key>Classes/Service/___PACKAGENAMEASIDENTIFIER___APIClient.h</key>
+                     <dict>
+                        <key>Path</key>
+                        <string>Auth/___PACKAGENAMEASIDENTIFIER___APIClient.h</string>
+                        <key>Group</key>
+                        <key>Service</key>
+                     </dict>
+                     <key>Classes/Service/___PACKAGENAMEASIDENTIFIER___APIClient.m</key>
+                     <dict>
+                        <key>Path</key>
+                        <string>Auth/___PACKAGENAMEASIDENTIFIER___APIClient.m</string>
+                        <key>Group</key>
+                        <key>Service</key>
+                     </dict>
+                     <key>Classes/Controllers/___VARIABLE_classPrefix:identifier___ViewController.h</key>
+                     <dict>
+                        <key>Path</key>
+                        <string>Auth/ViewController.h</string>
+                        <key>Group</key>
+                        <key>Controllers</key>
+                     </dict>
+                     <key>Classes/Controllers/___VARIABLE_classPrefix:identifier___ViewController.m</key>
+                     <dict>
+                        <key>Path</key>
+                        <string>Auth/ViewController.m</string>
+                        <key>Group</key>
+                        <key>Controllers</key>
+                     </dict>
+                  </dict>
+                  <key>Nodes</key>
+                  <array>
+                     <string>Classes/Controllers/___VARIABLE_classPrefix:identifier___ViewController.h</string>
+                     <string>Classes/Controllers/___VARIABLE_classPrefix:identifier___ViewController.m</string>
+                     <string>Classes/Service/___PACKAGENAMEASIDENTIFIER___APIClient.h</string>
+                     <string>Classes/Service/___PACKAGENAMEASIDENTIFIER___APIClient.m</string>
+                  </array>
+               </dict>
+               <key>Digest</key>
+               <dict>
+                  <key>Definitions</key>
+                  <dict>
+                     <key>Classes/Service/___PACKAGENAMEASIDENTIFIER___APIClient.h</key>
+                     <dict>
+                        <key>Path</key>
+                        <string>Auth/___PACKAGENAMEASIDENTIFIER___APIClient.h</string>
+                        <key>Group</key>
+                        <key>Service</key>
+                     </dict>
+                     <key>Classes/Service/___PACKAGENAMEASIDENTIFIER___APIClient.m</key>
+                     <dict>
+                        <key>Path</key>
+                        <string>Auth/___PACKAGENAMEASIDENTIFIER___APIClient.m</string>
+                        <key>Group</key>
+                        <key>Service</key>
+                     </dict>
+                     <key>Classes/Controllers/___VARIABLE_classPrefix:identifier___ViewController.h</key>
+                     <dict>
+                        <key>Path</key>
+                        <string>Auth/ViewController.h</string>
+                        <key>Group</key>
+                        <key>Controllers</key>
+                     </dict>
+                     <key>Classes/Controllers/___VARIABLE_classPrefix:identifier___ViewController.m</key>
+                     <dict>
+                        <key>Path</key>
+                        <string>Auth/ViewController.m</string>
+                        <key>Group</key>
+                        <key>Controllers</key>
+                     </dict>
+                  </dict>
+                  <key>Nodes</key>
+                  <array>
+                     <string>Classes/Controllers/___VARIABLE_classPrefix:identifier___ViewController.h</string>
+                     <string>Classes/Controllers/___VARIABLE_classPrefix:identifier___ViewController.m</string>
+                     <string>Classes/Service/___PACKAGENAMEASIDENTIFIER___APIClient.h</string>
+                     <string>Classes/Service/___PACKAGENAMEASIDENTIFIER___APIClient.m</string>
+                  </array>
+               </dict>
+            </dict>
+         </dict>
+      </array>
       <key>SortOrder</key>
       <integer>1</integer>
    </dict>
