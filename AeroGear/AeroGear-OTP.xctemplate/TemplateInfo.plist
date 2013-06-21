@@ -16,33 +16,36 @@
       <key>Options</key>
       <array>
          <dict>
+            <key>Default</key>
+            <string>false</string>
+            <key>Description</key>
+            <string>Indicates whether the application should include the AeroGear OTP library</string>
             <key>Identifier</key>
             <string>otp</string>
             <key>Name</key>
             <string>OTP (TOTP) - Time-based One-Time Password</string>
-            <key>Description</key>
-            <string>Indicates whether the application should include the AeroGear OTP library</string>
-            <key>NotPersisted</key>
-            <true />
+            <key>SortOrder</key>
+            <integer>2</integer>
             <key>Type</key>
-            <string>checkbox</string>            
-            <key>Default</key>
-            <string>false</string>
+            <string>checkbox</string>
             <key>Units</key>
             <dict>
                <key>true</key>
                <dict>
                   <key>Definitions</key>
                   <dict>
-                     <key>../Podfile:aerogear</key>
-                     <string>
-pod &apos;AeroGear&apos;
-pod &apos;AeroGear-OTP&apos;
-                     </string>
+                     <key>../Podfile:otp</key>
+                     <string>pod &apos;AeroGear-OTP&apos;</string>
                   </dict>
+                  <key>Nodes</key>
+                  <array>
+                     <string>../Podfile:otp</string>
+                  </array>
                </dict>
             </dict>
          </dict>
       </array>
+      <key>SortOrder</key>
+      <integer>1</integer>
    </dict>
 </plist>

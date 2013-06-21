@@ -6,15 +6,14 @@
       <key>Identifier</key>
       <string>org.aerogear.template.project.CocoaPods</string>
       <key>Name</key>
-      <string>CocoaPods</string>
+      <string>CocoaPods</string> 
       <key>Ancestors</key>
       <array />
       <key>Definitions</key>
       <dict>
          <key>../Podfile:platform</key>
-         <string>xcodeproj &apos;___PACKAGENAME___.xcodeproj&apos;
-
-platform :ios, &apos;5.0&apos;</string>
+         <string>platform :ios, &apos;5.0&apos;
+         </string>
       </dict>
       <key>Description</key>
       <string>AeroGear project template.</string>
