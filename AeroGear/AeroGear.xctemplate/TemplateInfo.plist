@@ -12,7 +12,7 @@
       <key>Definitions</key>
       <dict>
          <key>../Podfile:aerogear</key>
-         <string>pod &apos;AeroGear&apos;, :git => &apos;https://github.com/aerogear/aerogear-ios.git&apos;</string>            
+         <string>pod &apos;AeroGear&apos;, &apos;1.1.0&apos;</string>            
          <key>___PACKAGENAME___-Prefix.pch:objC:importSystemConfiguration</key>
          <string>#import &lt;SystemConfiguration/SystemConfiguration.h&gt;</string>
          <key>___PACKAGENAME___-Prefix.pch:objC:importCoreServices</key>
