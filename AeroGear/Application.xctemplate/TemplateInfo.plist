@@ -17,6 +17,7 @@
          <string>org.aerogear.template.project.CocoaPods</string>
          <string>org.aerogear.template.project.AeroGear</string>
          <string>org.aerogear.template.project.AeroGear-OTP</string>
+         <string>org.aerogear.template.project.AeroGear-Push</string>         
       </array>
       <key>Concrete</key>
       <true />
