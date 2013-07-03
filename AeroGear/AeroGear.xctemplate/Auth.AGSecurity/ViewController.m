@@ -7,9 +7,7 @@
 #import "___VARIABLE_classPrefix:identifier___ViewController.h"
 #import "___PACKAGENAMEASIDENTIFIER___APIClient.h"
 
-@implementation ___VARIABLE_classPrefix:identifier___ViewController {
-    NSArray *_tasks;
-}
+@implementation ___VARIABLE_classPrefix:identifier___ViewController 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
