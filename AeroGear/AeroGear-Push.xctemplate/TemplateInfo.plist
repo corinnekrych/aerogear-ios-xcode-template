@@ -59,8 +59,8 @@
         // both received when performing the mobile variant registration with the server.
         // See section "Register an iOS Variant" in the guide:
         // http://aerogear.org/docs/guides/aerogear-push-ios/unified-push-server/
-        [clientInfo setVariantID:@"&lt;# Mobile Variant Id #&gt;"];
-        [clientInfo setVariantSecret:@"&lt;# Mobile Variant Secret #&gt;"];
+        [clientInfo setVariantID:@"&lt;# Variant Id #&gt;"];
+        [clientInfo setVariantSecret:@"&lt;# Variant Secret #&gt;"];
         
         // --optional config--
         // set some 'useful' hardware information params
