@@ -35,7 +35,7 @@
                   <key>Definitions</key>
                   <dict>
                      <key>../Podfile:push</key>
-                     <string>pod 'AeroGearPush', :git =&gt; 'https://github.com/aerogear/aerogear-push-ios-registration.git'</string>
+                     <string>pod 'AeroGearPush', '0.6.0'</string>
                      <key>___VARIABLE_classPrefix:identifier___AppDelegate.m:push</key>
                      <string>#pragma mark - Push Notification handling
 
