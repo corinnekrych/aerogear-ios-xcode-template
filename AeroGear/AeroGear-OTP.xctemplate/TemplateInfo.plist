@@ -35,7 +35,7 @@
                   <key>Definitions</key>
                   <dict>
                      <key>../Podfile:otp</key>
-                     <string>pod &apos;AeroGear-OTP&apos;</string>
+                     <string>pod &apos;AeroGear-OTP&apos;, &apos;1.0.0&apos;</string>
                   </dict>
                   <key>Nodes</key>
                   <array>
