@@ -6,7 +6,7 @@
       <key>Name</key>
       <string>AeroGear Application</string>
       <key>Description</key>
-      <string>This template provides a starting point for an application using the AeroGear framework. A shared instance class is provided, offering connectivity through Pipes to remote RESTful endpoints, as well as a Podfile and an Objective-C .gitignore file.</string>
+      <string>This template provides a starting point for an application using the AeroGear framework. A shared instance class is provided, offering connectivity through Pipes to remote RESTful endpoints, UnifiedPush and OTP support, as well as a Podfile and an Objective-C .gitignore file.</string>
       <key>Identifier</key>
       <string>org.aerogear.template.project.ios</string>
       <key>Kind</key>
@@ -28,22 +28,15 @@
             <key>Path</key>
             <string>gitignore</string>
          </dict>
-         <key>___VARIABLE_classPrefix:identifier___AppDelegate.h:methods:navigationController</key>
-         <string>@property (strong, nonatomic) UINavigationController *navigationController;</string>
-         <key>___VARIABLE_classPrefix:identifier___AppDelegate.m:import</key>
-         <string>#import "___VARIABLE_classPrefix:identifier___ViewController.h"</string>
          <key>___VARIABLE_classPrefix:identifier___AppDelegate.m:applicationdidFinishLaunchingWithOptions</key>
          <dict>
             <key>Beginning</key>
             <string>- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    UIViewController *viewController = [[___VARIABLE_classPrefix:identifier___ViewController alloc] initWithStyle:UITableViewStylePlain];
-    self.navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
-
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.rootViewController = self.navigationController;</string>
-            <key>End</key>
-            <string>    [self.window makeKeyAndVisible];
+    self.window = ___RP___[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]]___AR___;
+    // Override point for customization after application launch.</string>
+                        <key>End</key>
+                        <string>    [self.window makeKeyAndVisible];
     return YES;
 }
 </string>
@@ -53,9 +46,8 @@
       </dict>
       <key>Nodes</key>
       <array>
-         <string>___VARIABLE_classPrefix:identifier___AppDelegate.m:applicationdidFinishLaunchingWithOptions</string>
-         <string>___VARIABLE_classPrefix:identifier___AppDelegate.h:methods:navigationController</string>
          <string>.gitignore</string>
+         <string>___VARIABLE_classPrefix:identifier___AppDelegate.m:applicationdidFinishLaunchingWithOptions</string>
       </array>
       <key>SortOrder</key>
       <integer>1</integer>

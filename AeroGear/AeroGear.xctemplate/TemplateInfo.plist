@@ -9,27 +9,63 @@
       <string>AeroGear Dependency</string>
       <key>Ancestors</key>
       <array />
-      <key>Definitions</key>
-      <dict>
-         <key>../Podfile:aerogear</key>
-         <string>pod &apos;AeroGear&apos;, &apos;1.2.0&apos;</string>            
-         <key>___PACKAGENAME___-Prefix.pch:objC:importSystemConfiguration</key>
-         <string>#import &lt;SystemConfiguration/SystemConfiguration.h&gt;</string>
-         <key>___PACKAGENAME___-Prefix.pch:objC:importCoreServices</key>
-         <string>#import &lt;MobileCoreServices/MobileCoreServices.h&gt;</string>
-      </dict>
       <key>Description</key>
       <string />
       <key>Kind</key>
       <string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
-      <key>Nodes</key>
-      <array>
-         <string>../Podfile:aerogear</string>
-         <string>___PACKAGENAME___-Prefix.pch:objC:importSystemConfiguration</string>
-         <string>___PACKAGENAME___-Prefix.pch:objC:importCoreServices</string>
-      </array>
       <key>Options</key>
       <array>
+         <dict>
+            <key>Identifier</key>
+            <string>pipeline</string>
+            <key>Required</key>
+            <true />
+            <key>Name</key>
+            <string>Pipeline support</string>
+            <key>Description</key>
+            <string>Whether the application will include Pipeline support</string>
+            <key>NotPersisted</key>
+            <true />
+            <key>Type</key>
+            <string>checkbox</string>
+            <key>Default</key>
+            <string>true</string>
+            <key>Units</key>
+            <dict>
+               <key>true</key>
+               <dict>
+                  <key>Definitions</key>
+                  <dict>
+                     <key>../Podfile:aerogear</key>
+                     <string>pod 'AeroGear', '1.2.0'</string>
+                     <key>___PACKAGENAME___-Prefix.pch:objC:importSystemConfiguration</key>
+                     <string>#import &lt;SystemConfiguration/SystemConfiguration.h&gt;</string>
+                     <key>___PACKAGENAME___-Prefix.pch:objC:importCoreServices</key>
+                     <string>#import &lt;MobileCoreServices/MobileCoreServices.h&gt;</string>
+                     <key>___VARIABLE_classPrefix:identifier___AppDelegate.h:methods:viewController</key>
+                     <string>@property (strong, nonatomic) UINavigationController *navigationController;</string>
+                     <key>___VARIABLE_classPrefix:identifier___AppDelegate.m:import:___VARIABLE_classPrefix:identifier___ViewController.h</key>
+                     <string>#import "___VARIABLE_classPrefix:identifier___ViewController.h"</string>
+                     <key>___VARIABLE_classPrefix:identifier___AppDelegate.m:applicationdidFinishLaunchingWithOptions:setup</key>
+                     <string>
+UIViewController *viewController = [[___VARIABLE_classPrefix:identifier___ViewController alloc] initWithStyle:UITableViewStylePlain];
+self.navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
+self.window.rootViewController = self.navigationController;</string>
+                     <key>Indent</key>
+                     <integer>1</integer>
+                  </dict>
+                  <key>Nodes</key>
+                  <array>
+                     <string>___VARIABLE_classPrefix:identifier___AppDelegate.h:class:___VARIABLE_classPrefix:identifier___ViewController</string>
+                     <string>___VARIABLE_classPrefix:identifier___AppDelegate.h:methods:viewController</string>
+                     <string>___VARIABLE_classPrefix:identifier___AppDelegate.m:import:___VARIABLE_classPrefix:identifier___ViewController.h</string>
+                     <string>../Podfile:aerogear</string>
+                     <string>___PACKAGENAME___-Prefix.pch:objC:importSystemConfiguration</string>
+                     <string>___PACKAGENAME___-Prefix.pch:objC:importCoreServices</string>
+                  </array>
+               </dict>
+            </dict>
+         </dict>
          <dict>
             <key>Identifier</key>
             <string>authType</string>
@@ -43,6 +79,11 @@
             <string>popup</string>
             <key>Default</key>
             <string>None</string>
+            <key>RequiredOptions</key>
+            <dict>
+               <key>pipeline</key>
+               <string>true</string>
+            </dict>
             <key>Units</key>
             <dict>
                <key>None</key>
@@ -208,7 +249,7 @@
                      <string>Classes/Service/___PACKAGENAMEASIDENTIFIER___APIClient.h</string>
                      <string>Classes/Service/___PACKAGENAMEASIDENTIFIER___APIClient.m</string>
                   </array>
-               </dict>               
+               </dict>
             </dict>
          </dict>
       </array>
