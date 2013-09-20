@@ -44,7 +44,7 @@ static NSString * const k___PACKAGENAMEASIDENTIFIER___APIBaseURLString = @"<# Se
     }];
 
     // login to the service
-    [authModule login:@{@"loginName": @"<# Username #>", @"password":@"<# Password #>"}
+    [authModule login:@{@"loginName": username, @"password": password}
          success:^(id object) {
             // if successfully logged in, it is time to construct our pipes.
             // Note that we assign the authentication module we
