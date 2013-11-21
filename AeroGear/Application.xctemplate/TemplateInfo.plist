@@ -33,7 +33,7 @@
             <key>Beginning</key>
             <string>- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = ___RP___[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]]___AR___;
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.</string>
                         <key>End</key>
                         <string>    [self.window makeKeyAndVisible];
