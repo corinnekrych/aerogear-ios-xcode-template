@@ -6,7 +6,7 @@
       <key>Name</key>
       <string>AeroGear Application</string>
       <key>Description</key>
-      <string>This template provides a starting point for an application using the AeroGear framework. A shared instance class is provided, offering connectivity through Pipes to remote RESTful endpoints, UnifiedPush and OTP support, as well as a Podfile and an Objective-C .gitignore file.</string>
+      <string>This template provides a starting point for an application using the AeroGear framework. A shared instance class is provided, offering connectivity through Pipes to remote RESTful endpoints, UnifiedPush, OTP and Crypto support, as well as a Podfile and an Objective-C .gitignore file.</string>
       <key>Identifier</key>
       <string>org.aerogear.template.project.ios</string>
       <key>Kind</key>
@@ -17,7 +17,8 @@
          <string>org.aerogear.template.project.CocoaPods</string>
          <string>org.aerogear.template.project.AeroGear</string>
          <string>org.aerogear.template.project.AeroGear-OTP</string>
-         <string>org.aerogear.template.project.AeroGear-Push</string>         
+         <string>org.aerogear.template.project.AeroGear-Push</string>
+         <string>org.aerogear.template.project.AeroGear-Crypto</string>
       </array>
       <key>Concrete</key>
       <true />
