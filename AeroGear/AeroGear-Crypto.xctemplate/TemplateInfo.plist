@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+   <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 
 <plist version="1.0">
@@ -19,7 +19,7 @@
             <key>Default</key>
             <string>false</string>
             <key>Description</key>
-            <string>Indicates whether the application should include the AeroGear Crypto library</string>
+            <string>Indicates whether the application should include the AeroGear Crypto library.&#xA;&#xA;Note: has no effect if the 'Enable Pipeline' support is enabled, since 'Crypto' is implicitly included.</string>
             <key>Identifier</key>
             <string>crypto</string>
             <key>Name</key>
@@ -28,11 +28,6 @@
             <integer>2</integer>
             <key>Type</key>
             <string>checkbox</string>
-            <key>RequiredOptions</key>
-            <dict>
-               <key>pipeline</key>
-               <string>false</string>
-            </dict>
             <key>Units</key>
             <dict>
                <key>true</key>
