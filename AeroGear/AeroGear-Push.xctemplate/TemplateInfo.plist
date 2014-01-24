@@ -94,7 +94,7 @@
     
 }
 
-// Uncomment if you want to support 'Remote notifications'.
+// Uncomment if you want to support 'silent' Push Notifications.
 // NOTE: Ensure that 'Remote notifications' capability is enabled on the app target.
 //- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
 // 
