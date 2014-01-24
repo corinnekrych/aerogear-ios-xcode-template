@@ -92,7 +92,13 @@
     
     // 'userInfo' contains information related to the remote notification.
     
-}</string>
+}
+
+// Uncomment if you want to support 'Remote notifications'.
+// NOTE: Ensure that 'Remote notifications' capability is enabled on the app target.
+//- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
+// 
+//}</string>
                      <key>___VARIABLE_classPrefix:identifier___AppDelegate.m:applicationdidFinishLaunchingWithOptions:setup:push</key>
                      <string>
 // register with Apple Push Notification Service (APNS)
