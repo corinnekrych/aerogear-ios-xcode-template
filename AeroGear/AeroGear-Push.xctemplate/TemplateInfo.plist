@@ -35,7 +35,7 @@
                   <key>Definitions</key>
                   <dict>
                      <key>../Podfile:push</key>
-                     <string>pod &apos;AeroGear-Push&apos;, &apos;0.8.0&apos;</string>
+                     <string>pod &apos;AeroGear-Push&apos;, &apos;0.8.1&apos;</string>
                      <key>___VARIABLE_classPrefix:identifier___AppDelegate.m:push</key>
                      <string>#pragma mark - Push Notification handling
 
