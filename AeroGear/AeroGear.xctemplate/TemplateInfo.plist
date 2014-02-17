@@ -37,7 +37,7 @@
                   <key>Definitions</key>
                   <dict>
                      <key>../Podfile:aerogear</key>
-                     <string>pod 'AeroGear', '1.3.0'</string>
+                     <string>pod 'AeroGear', '1.4.0'</string>
                      <key>___PACKAGENAME___-Prefix.pch:objC:importSystemConfiguration</key>
                      <string>#import &lt;SystemConfiguration/SystemConfiguration.h&gt;</string>
                      <key>___PACKAGENAME___-Prefix.pch:objC:importCoreServices</key>
