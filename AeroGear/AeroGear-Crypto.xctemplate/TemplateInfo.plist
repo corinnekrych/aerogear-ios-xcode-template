@@ -35,7 +35,7 @@
                   <key>Definitions</key>
                   <dict>
                      <key>../Podfile:crypto</key>
-                     <string>pod &apos;AeroGear-Crypto&apos;, &apos;0.1.0&apos;</string>
+                     <string>pod &apos;AeroGear-Crypto&apos;, &apos;0.2.3&apos;</string>
                   </dict>
                   <key>Nodes</key>
                   <array>

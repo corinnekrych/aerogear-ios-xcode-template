@@ -12,7 +12,7 @@
       <key>Definitions</key>
       <dict>
          <key>../Podfile:platform</key>
-         <string>platform :ios, &apos;5.0&apos;
+         <string>platform :ios, &apos;7.0&apos;
          </string>
       </dict>
       <key>Description</key>
