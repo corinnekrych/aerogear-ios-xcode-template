@@ -94,30 +94,20 @@
     
 }
 
-// Uncomment if you want to support 'silent' Push Notifications feature in iOS 7.
-// Please note:
-//            - iOS 7 will call this method (if implemented) instead of the standard
-//              didReceiveRemoteNotification: to handle the request. The generated 
-//              template code will smartly forward the call to this method if it detects
-//              the application runs in foreground.
-//            - ensure that 'Remote notifications' capability is enabled on the app target.
+// Uncomment if you want to support 'silent' Push Notifications. iOS 7 will call this method (if implemented)
+// instead of the standard didReceiveRemoteNotification: to handle the incoming push notification.
 //
-// Note: If your application has no need for background processing, using the didReceiveRemoteNotification: method
-//       is recommended.
+// Note: If your application has no need for background processing, using the didReceiveRemoteNotification:
+//       method is recommended.
 /*
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
+    
+    // 'userInfo' contains information related to the remote notification.
 
-    if (application.applicationState == UIApplicationStateBackground) {
-        // perform tasks that are best suited for background processing,
-        // such as download data that is related to the push notification
-        ...
-        
-        // afterwards it is required to invoke the given block:
-        completionHandler(UIBackgroundFetchResultNewData); // download of data did succeed
-    } else {
-        // foreground .....
-        [self application:application didReceiveRemoteNotification:userInfo];
-    }
+    // should always be called at the end of processing so
+    // the system can take a UI snapshot of the application.
+    //completionHandler(UIBackgroundFetchResultNewData);
+
 }
 */</string>
                      <key>___VARIABLE_classPrefix:identifier___AppDelegate.m:applicationdidFinishLaunchingWithOptions:setup:push</key>
