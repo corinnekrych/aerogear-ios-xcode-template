@@ -71,13 +71,13 @@
         [clientInfo setDeviceType: [currentDevice model]];
 
     } success:^() {
-        
         // successfully registered!
+        NSLog(@"UPS registration worked");
 
     } failure:^(NSError *error) {
         // An error occurred during registration.
         // Let's log it for now
-        NSLog(@"PushEE registration Error: %@", error);
+        NSLog(@"UPS registration Error: %@", error);
     }];
 }
 
