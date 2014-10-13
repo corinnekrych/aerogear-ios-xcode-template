@@ -13,7 +13,7 @@
       <string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
       <key>Ancestors</key>
       <array>
-         <string>com.apple.dt.unit.cocoaTouchApplication</string>
+         <string>com.apple.dt.unit.applicationBase</string>
          <string>org.aerogear.template.project.CocoaPods</string>
          <string>org.aerogear.template.project.AeroGear</string>
          <string>org.aerogear.template.project.AeroGear-OTP</string>
