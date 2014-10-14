@@ -3,6 +3,11 @@ AeroGear Xcode Project Template
 
 ![Xcode Project Template Screenshot 1](https://raw.github.com/aerogear/aerogear-ios-xcode-template/screenshots/wizard.png)
 
+## Supported versions
+
+* if you run Xcode5.X use 1.6.1 tag
+* if you run Xcode6.X use 1.6.2 tag or master
+
 ## How to install
 
 To install the template in your current Xcode installation, please follow these steps:
