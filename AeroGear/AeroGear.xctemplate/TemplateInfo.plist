@@ -37,18 +37,18 @@
                   <key>Definitions</key>
                   <dict>
                      <key>../Podfile:aerogear</key>
-                     <string>pod &apos;AeroGear&apos;, &apos;1.6.0&apos;</string>
-                     <key>importSystemConfiguration</key>
+                     <string>pod &apos;AeroGear&apos;, &apos;1.6.1&apos;</string>
+                     <key>___PACKAGENAME___-Prefix.pch:objC:importSystemConfiguration</key>
                      <string>#import &lt;SystemConfiguration/SystemConfiguration.h&gt;</string>
-                     <key>importCoreServices</key>
+                     <key>___PACKAGENAME___-Prefix.pch:objC:importCoreServices</key>
                      <string>#import &lt;MobileCoreServices/MobileCoreServices.h&gt;</string>
-                     <key>AppDelegate.h:methods:viewController</key>
+                     <key>___VARIABLE_classPrefix:identifier___AppDelegate.h:methods:viewController</key>
                      <string>@property (strong, nonatomic) UINavigationController *navigationController;</string>
-                     <key>AppDelegate.m:import:___VARIABLE_productName:identifier___ViewController.h</key>
-                     <string>#import "___VARIABLE_productName:identifier___ViewController.h"</string>
-                     <key>AppDelegate.m:applicationdidFinishLaunchingWithOptions:setup</key>
+                     <key>___VARIABLE_classPrefix:identifier___AppDelegate.m:import:___VARIABLE_classPrefix:identifier___ViewController.h</key>
+                     <string>#import "___VARIABLE_classPrefix:identifier___ViewController.h"</string>
+                     <key>___VARIABLE_classPrefix:identifier___AppDelegate.m:applicationdidFinishLaunchingWithOptions:setup</key>
                      <string>
-UIViewController *viewController = [[___VARIABLE_productName:identifier___ViewController alloc] initWithStyle:UITableViewStylePlain];
+UIViewController *viewController = [[___VARIABLE_classPrefix:identifier___ViewController alloc] initWithStyle:UITableViewStylePlain];
 self.navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
 self.window.rootViewController = self.navigationController;</string>
                      <key>Indent</key>
@@ -56,10 +56,12 @@ self.window.rootViewController = self.navigationController;</string>
                   </dict>
                   <key>Nodes</key>
                   <array>
-                     <string>AppDelegate.h:class:___VARIABLE_productName:identifier___ViewController</string>
-                     <string>AppDelegate.h:methods:viewController</string>
-                     <string>AppDelegate.m:import:___VARIABLE_productName:identifier___ViewController.h</string>
+                     <string>___VARIABLE_classPrefix:identifier___AppDelegate.h:class:___VARIABLE_classPrefix:identifier___ViewController</string>
+                     <string>___VARIABLE_classPrefix:identifier___AppDelegate.h:methods:viewController</string>
+                     <string>___VARIABLE_classPrefix:identifier___AppDelegate.m:import:___VARIABLE_classPrefix:identifier___ViewController.h</string>
                      <string>../Podfile:aerogear</string>
+                     <string>___PACKAGENAME___-Prefix.pch:objC:importSystemConfiguration</string>
+                     <string>___PACKAGENAME___-Prefix.pch:objC:importCoreServices</string>
                   </array>
                </dict>
             </dict>
@@ -102,14 +104,14 @@ self.window.rootViewController = self.navigationController;</string>
                         <key>Group</key>
                         <key>Service</key>
                      </dict>
-                     <key>Classes/Controllers/___VARIABLE_productName:identifier___ViewController.h</key>
+                     <key>Classes/Controllers/___VARIABLE_classPrefix:identifier___ViewController.h</key>
                      <dict>
                         <key>Path</key>
                         <string>Auth.None/ViewController.h</string>
                         <key>Group</key>
                         <key>Controllers</key>
                      </dict>
-                     <key>Classes/Controllers/___VARIABLE_productName:identifier___ViewController.m</key>
+                     <key>Classes/Controllers/___VARIABLE_classPrefix:identifier___ViewController.m</key>
                      <dict>
                         <key>Path</key>
                         <string>Auth.None/ViewController.m</string>
@@ -119,8 +121,8 @@ self.window.rootViewController = self.navigationController;</string>
                   </dict>
                   <key>Nodes</key>
                   <array>
-                     <string>Classes/Controllers/___VARIABLE_productName:identifier___ViewController.h</string>
-                     <string>Classes/Controllers/___VARIABLE_productName:identifier___ViewController.m</string>
+                     <string>Classes/Controllers/___VARIABLE_classPrefix:identifier___ViewController.h</string>
+                     <string>Classes/Controllers/___VARIABLE_classPrefix:identifier___ViewController.m</string>
                      <string>Classes/Service/___PACKAGENAMEASIDENTIFIER___APIClient.h</string>
                      <string>Classes/Service/___PACKAGENAMEASIDENTIFIER___APIClient.m</string>
                   </array>
@@ -143,14 +145,14 @@ self.window.rootViewController = self.navigationController;</string>
                         <key>Group</key>
                         <key>Service</key>
                      </dict>
-                     <key>Classes/Controllers/___VARIABLE_productName:identifier___ViewController.h</key>
+                     <key>Classes/Controllers/___VARIABLE_classPrefix:identifier___ViewController.h</key>
                      <dict>
                         <key>Path</key>
                         <string>Auth.BasicDigest/ViewController.h</string>
                         <key>Group</key>
                         <key>Controllers</key>
                      </dict>
-                     <key>Classes/Controllers/___VARIABLE_productName:identifier___ViewController.m</key>
+                     <key>Classes/Controllers/___VARIABLE_classPrefix:identifier___ViewController.m</key>
                      <dict>
                         <key>Path</key>
                         <string>Auth.BasicDigest/ViewController.m</string>
@@ -160,8 +162,8 @@ self.window.rootViewController = self.navigationController;</string>
                   </dict>
                   <key>Nodes</key>
                   <array>
-                     <string>Classes/Controllers/___VARIABLE_productName:identifier___ViewController.h</string>
-                     <string>Classes/Controllers/___VARIABLE_productName:identifier___ViewController.m</string>
+                     <string>Classes/Controllers/___VARIABLE_classPrefix:identifier___ViewController.h</string>
+                     <string>Classes/Controllers/___VARIABLE_classPrefix:identifier___ViewController.m</string>
                      <string>Classes/Service/___PACKAGENAMEASIDENTIFIER___APIClient.h</string>
                      <string>Classes/Service/___PACKAGENAMEASIDENTIFIER___APIClient.m</string>
                   </array>
@@ -184,14 +186,14 @@ self.window.rootViewController = self.navigationController;</string>
                         <key>Group</key>
                         <key>Service</key>
                      </dict>
-                     <key>Classes/Controllers/___VARIABLE_productName:identifier___ViewController.h</key>
+                     <key>Classes/Controllers/___VARIABLE_classPrefix:identifier___ViewController.h</key>
                      <dict>
                         <key>Path</key>
                         <string>Auth.BasicDigest/ViewController.h</string>
                         <key>Group</key>
                         <key>Controllers</key>
                      </dict>
-                     <key>Classes/Controllers/___VARIABLE_productName:identifier___ViewController.m</key>
+                     <key>Classes/Controllers/___VARIABLE_classPrefix:identifier___ViewController.m</key>
                      <dict>
                         <key>Path</key>
                         <string>Auth.BasicDigest/ViewController.m</string>
@@ -201,8 +203,8 @@ self.window.rootViewController = self.navigationController;</string>
                   </dict>
                   <key>Nodes</key>
                   <array>
-                     <string>Classes/Controllers/___VARIABLE_productName:identifier___ViewController.h</string>
-                     <string>Classes/Controllers/___VARIABLE_productName:identifier___ViewController.m</string>
+                     <string>Classes/Controllers/___VARIABLE_classPrefix:identifier___ViewController.h</string>
+                     <string>Classes/Controllers/___VARIABLE_classPrefix:identifier___ViewController.m</string>
                      <string>Classes/Service/___PACKAGENAMEASIDENTIFIER___APIClient.h</string>
                      <string>Classes/Service/___PACKAGENAMEASIDENTIFIER___APIClient.m</string>
                   </array>
@@ -225,14 +227,14 @@ self.window.rootViewController = self.navigationController;</string>
                         <key>Group</key>
                         <key>Service</key>
                      </dict>
-                     <key>Classes/Controllers/___VARIABLE_productName:identifier___ViewController.h</key>
+                     <key>Classes/Controllers/___VARIABLE_classPrefix:identifier___ViewController.h</key>
                      <dict>
                         <key>Path</key>
                         <string>Auth.AGSecurity/ViewController.h</string>
                         <key>Group</key>
                         <key>Controllers</key>
                      </dict>
-                     <key>Classes/Controllers/___VARIABLE_productName:identifier___ViewController.m</key>
+                     <key>Classes/Controllers/___VARIABLE_classPrefix:identifier___ViewController.m</key>
                      <dict>
                         <key>Path</key>
                         <string>Auth.AGSecurity/ViewController.m</string>
@@ -242,8 +244,8 @@ self.window.rootViewController = self.navigationController;</string>
                   </dict>
                   <key>Nodes</key>
                   <array>
-                     <string>Classes/Controllers/___VARIABLE_productName:identifier___ViewController.h</string>
-                     <string>Classes/Controllers/___VARIABLE_productName:identifier___ViewController.m</string>
+                     <string>Classes/Controllers/___VARIABLE_classPrefix:identifier___ViewController.h</string>
+                     <string>Classes/Controllers/___VARIABLE_classPrefix:identifier___ViewController.m</string>
                      <string>Classes/Service/___PACKAGENAMEASIDENTIFIER___APIClient.h</string>
                      <string>Classes/Service/___PACKAGENAMEASIDENTIFIER___APIClient.m</string>
                   </array>
