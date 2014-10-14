@@ -13,6 +13,13 @@
       <string />
       <key>Kind</key>
       <string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+
+
+      <key>Platforms</key>
+      <array>
+         <string>com.apple.platform.iphoneos</string>
+      </array>
+
       <key>Options</key>
       <array>
          <dict>
@@ -36,13 +43,20 @@
                   <dict>
                      <key>../Podfile:push</key>
                      <string>pod &apos;AeroGear-Push&apos;, &apos;1.0.0&apos;</string>
-                     <key>___VARIABLE_classPrefix:identifier___AppDelegate.m:push</key>
-                     <string>#pragma mark - Push Notification handling
+<key>AppDelegate.m:import:AeroGearPush.h</key>
+<string>#import "AeroGearPush.h"</string>
 
-// Upon successfully registration with APNS, we register the device to 'AeroGear Push Server' 
-- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken 
-{
-    // initialize "Registration helper" object using the
+<key>AppDelegate.m:implementation:methods:commentDidRegisterForRemoteNotificationsWithDeviceToken</key>
+<string>// Upon successfully registration with APNS, we register the device to 'AeroGear Push Server' </string>
+
+<key>AppDelegate.m:implementation:methods:commentDidReceiveRemoteNotification</key>
+<string>// When the program is in the foreground, this callback receives the Payload of the received Push Notification message</string>
+
+<key>AppDelegate.m:implementation:methods:didReceiveRemoteNotification:content</key>
+<string>    // 'userInfo' contains information related to the remote notification.</string>
+
+<key>AppDelegate.m:implementation:methods:didRegisterForRemoteNotificationsWithDeviceToken:content</key>
+<string>    // initialize "Registration helper" object using the
     // base URL where the "AeroGear Unified Push Server" is running.
     AGDeviceRegistration *registration =
     
@@ -78,39 +92,31 @@
         // An error occurred during registration.
         // Let's log it for now
         NSLog(@"UPS registration Error: %@", error);
-    }];
-}
-
-// Callback called after failing to register with APNS
-- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
-    // Log the error for now
-    NSLog(@"APNs Error: %@", error);
-}
-
-// When the program is in the foreground, this callback receives the Payload of the received Push Notification message
-- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
-    
-    // 'userInfo' contains information related to the remote notification.
-    
-}
-
-// Uncomment if you want to support 'silent' Push Notifications. iOS 7 will call this method (if implemented)
+    }];</string>
+                     
+<key>AppDelegate.m:implementation:methods:commentStart</key>
+<string>// Uncomment if you want to support 'silent' Push Notifications. iOS 7 will call this method (if implemented)
 // instead of the standard didReceiveRemoteNotification: to handle the incoming push notification.
 //
 // Note: If your application has no need for background processing, using the didReceiveRemoteNotification:
 //       method is recommended.
-/*
-- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
-    
-    // 'userInfo' contains information related to the remote notification.
+/*</string>
+
+<key>AppDelegate.m:implementation:methods:commentEnd</key>
+<string>*/</string>
+
+<key>AppDelegate.m:implementation:methods:didReceiveRemoteNotification:content</key>
+<string>    // 'userInfo' contains information related to the remote notification.
 
     // should always be called at the end of processing so
     // the system can take a UI snapshot of the application.
-    //completionHandler(UIBackgroundFetchResultNewData);
+    //completionHandler(UIBackgroundFetchResultNewData);</string>
 
-}
-*/</string>
-                     <key>___VARIABLE_classPrefix:identifier___AppDelegate.m:applicationdidFinishLaunchingWithOptions:setup:push</key>
+<key>AppDelegate.m:implementation:methods:didFailToRegisterForRemoteNotificationsWithError:content</key>
+<string>// Log the error for now
+    NSLog(@"APNs Error: %@", error);</string>
+
+                     <key>AppDelegate.m:implementation:methods:applicationdidFinishLaunchingWithOptions:body:content</key>
                      <string>
 // register with Apple Push Notification Service (APNS)
 // to retrieve the device token.
@@ -127,14 +133,39 @@
 #else
     [[UIApplication sharedApplication] registerForRemoteNotificationTypes: (UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound | UIRemoteNotificationTypeAlert)];
 #endif
+  return YES;
  </string>
                   </dict>
                   <key>Nodes</key>
                   <array>
                      <string>../Podfile:push</string>
-                     <string>___VARIABLE_classPrefix:identifier___AppDelegate.m:applicationdidFinishLaunchingWithOptions:setup:push</string>
-                     <string>___VARIABLE_classPrefix:identifier___AppDelegate.m:push</string>
-                     <string>___VARIABLE_classPrefix:identifier___AppDelegate.m:import:AeroGearPush.h</string>
+                     <string>AppDelegate.m:import:AeroGearPush.h</string>
+
+         <string>AppDelegate.h:comments</string>
+         <string>AppDelegate.h:imports:importCocoa</string>
+         <string>AppDelegate.h:interface(AppDelegate : UIResponder &lt;UIApplicationDelegate&gt;)</string>
+         <string>AppDelegate.h:interface:window</string>
+         <string>AppDelegate.m:comments</string>
+         <string>AppDelegate.m:imports:importHeader:AppDelegate.h</string>
+         <string>AppDelegate.m:extension</string>
+         <string>AppDelegate.m:implementation:synthesize</string>
+         <string>AppDelegate.m:implementation:methods:applicationdidFinishLaunchingWithOptions(- (BOOL\)application:(UIApplication *\)application didFinishLaunchingWithOptions:(NSDictionary *\)launchOptions)</string>
+         <string>AppDelegate.m:implementation:methods:applicationdidFinishLaunchingWithOptions:body</string>
+         <string>AppDelegate.m:implementation:methods:applicationdidFinishLaunchingWithOptions:body:content</string>
+         <string>AppDelegate.m:implementation:methods:didFailToRegisterForRemoteNotificationsWithError(- (void\)application:(UIApplication *\)application didFailToRegisterForRemoteNotificationsWithError:(NSError *\)error)</string>
+         <string>AppDelegate.m:implementation:methods:didFailToRegisterForRemoteNotificationsWithError:content</string>
+
+         <string>AppDelegate.m:implementation:methods:commentStart</string>
+         <string>AppDelegate.m:implementation:methods:didReceiveRemoteNotification(- (void\)application:(UIApplication *\)application didReceiveRemoteNotification:(NSDictionary *\)userInfo fetchCompletionHandler:(void (^\)(UIBackgroundFetchResult\)\)completionHandler)</string>
+
+         <string>AppDelegate.m:implementation:methods:didReceiveRemoteNotification:content</string>
+         <string>AppDelegate.m:implementation:methods:commentEnd</string>
+         <string>AppDelegate.m:implementation:methods:commentDidRegisterForRemoteNotificationsWithDeviceToken</string>
+         <string>AppDelegate.m:implementation:methods:didRegisterForRemoteNotificationsWithDeviceToken(- (void\)application:(UIApplication *\)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *\)deviceToken)</string>
+         <string>AppDelegate.m:implementation:methods:didRegisterForRemoteNotificationsWithDeviceToken:content</string>
+         <string>AppDelegate.m:implementation:methods:commentDidReceiveRemoteNotification</string>
+         <string>AppDelegate.m:implementation:methods:didReceiveRemoteNotification(- (void\)application:(UIApplication *\)application didReceiveRemoteNotification:(NSDictionary *\)userInfo)</string>
+         <string>AppDelegate.m:implementation:methods:didReceiveRemoteNotification:content</string>
                   </array>
                </dict>
             </dict>
