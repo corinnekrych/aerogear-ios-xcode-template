@@ -28,6 +28,19 @@
          <string>org.aerogear.template.project.AeroGear-Push</string>
          <string>org.aerogear.template.project.AeroGear-Crypto</string>
       </array>
+
+<key>Project</key>
+   <dict>
+
+      <key>SDK</key>
+      <string>iphoneos</string>
+      <key>SharedSettings</key>
+      <dict>
+         <key>IPHONEOS_DEPLOYMENT_TARGET</key>
+         <string>7.0</string>
+      </dict>
+   </dict>
+
       <key>Concrete</key>
       <true />
       <key>Definitions</key>
