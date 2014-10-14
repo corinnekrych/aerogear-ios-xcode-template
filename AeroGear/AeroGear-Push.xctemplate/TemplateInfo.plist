@@ -36,7 +36,7 @@
                   <dict>
                      <key>../Podfile:push</key>
                      <string>pod &apos;AeroGear-Push&apos;, &apos;1.0.0&apos;</string>
-                     <key>___VARIABLE_classPrefix:identifier___AppDelegate.m:push</key>
+                     <key>AppDelegate.m:push</key>
                      <string>#pragma mark - Push Notification handling
 
 // Upon successfully registration with APNS, we register the device to 'AeroGear Push Server' 
@@ -110,7 +110,7 @@
 
 }
 */</string>
-                     <key>___VARIABLE_classPrefix:identifier___AppDelegate.m:applicationdidFinishLaunchingWithOptions:setup:push</key>
+                     <key>AppDelegate.m:applicationdidFinishLaunchingWithOptions:setup:push</key>
                      <string>
 // register with Apple Push Notification Service (APNS)
 // to retrieve the device token.
@@ -132,9 +132,9 @@
                   <key>Nodes</key>
                   <array>
                      <string>../Podfile:push</string>
-                     <string>___VARIABLE_classPrefix:identifier___AppDelegate.m:applicationdidFinishLaunchingWithOptions:setup:push</string>
-                     <string>___VARIABLE_classPrefix:identifier___AppDelegate.m:push</string>
-                     <string>___VARIABLE_classPrefix:identifier___AppDelegate.m:import:AeroGearPush.h</string>
+                     <string>AppDelegate.m:applicationdidFinishLaunchingWithOptions:setup:push</string>
+                     <string>AppDelegate.m:push</string>
+                     <string>AppDelegate.m:import:AeroGearPush.h</string>
                   </array>
                </dict>
             </dict>
