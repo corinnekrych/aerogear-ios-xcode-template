@@ -8,9 +8,7 @@
       <key>Name</key>
       <string>CocoaPods</string> 
       <key>Ancestors</key>
-      <array>
-         <string>com.apple.dt.unit.base</string>
-      </array>
+      <array />
       <key>Definitions</key>
       <dict>
          <key>../Podfile:platform</key>
