@@ -4,16 +4,16 @@
 //  See Project's web site for more details http://www.aerogear.org
 //
 
-#import "___PACKAGENAMEASIDENTIFIER___APIClient.h"
+#import "APIClient.h"
 
-static NSString * const k___PACKAGENAMEASIDENTIFIER___APIBaseURLString = @"<# Service URL #>";
+static NSString * const kAPIBaseURLString = @"<# Service URL #>";
 
-@implementation ___PACKAGENAMEASIDENTIFIER___APIClient
+@implementation APIClient
 
 @synthesize pipe = _pipe;
 
-+ (___PACKAGENAMEASIDENTIFIER___APIClient *)sharedInstance {
-    static ___PACKAGENAMEASIDENTIFIER___APIClient *_sharedInstance = nil;
++ (APIClient *)sharedInstance {
+    static APIClient *_sharedInstance = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         _sharedInstance = [[self alloc] init];
@@ -27,7 +27,7 @@ static NSString * const k___PACKAGENAMEASIDENTIFIER___APIBaseURLString = @"<# Se
                   success:(void (^)())success
                   failure:(void (^)(NSError *error))failure {
 
-    NSURL *baseURL = [NSURL URLWithString:k___PACKAGENAMEASIDENTIFIER___APIBaseURLString];
+    NSURL *baseURL = [NSURL URLWithString:kAPIBaseURLString];
 
     // create the Pipeline object 
     AGPipeline *pipeline = [AGPipeline pipelineWithBaseURL:baseURL];
